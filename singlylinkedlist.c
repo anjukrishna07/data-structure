@@ -121,6 +121,14 @@ return;
 if(temp->data==key)
 {
 printf("%d deleted",temp->data);
+  if(temp==header)
+  {
+    p=header;
+    header=temp->LINK;
+    free(p);
+  }
+  else
+  {
 p->LINK=temp->LINK;
 free(temp);
 }
